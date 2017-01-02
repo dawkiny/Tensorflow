@@ -30,6 +30,7 @@ with tf.Session() as session:
 
 
 All ```tensor``` have this objects.  
+
 | OBJECT | DESCRIPTION | USAGE | EXAMPLE |
 | :--- | :---------- | :------ | :------ |
 | ```rank``` | Dimension | ```tensor.ndim``` | ```vector```: 1  ```matrix```: 2  ```ndarray``` or ```panel```: 3 |
