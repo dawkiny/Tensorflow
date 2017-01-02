@@ -28,7 +28,7 @@ with tf.Session() as session:
 
 ## ```tensorflow``` Data Structure
 
-```tensor```
+
 All ```tensor``` have this objects.
 | OBJECT | DESCRIPTION | USAGE | EXAMPLE |
 | :--- | :---------- | :------ | :------ |
