@@ -69,10 +69,10 @@ All of the following ```methods``` can initiate ```tensor```.
 * Variables  
 
 
->```tf.Variable.__init__(initial_value=None, trainable=True, collections=None, validate_shape=True, caching_device=None, name=None, variable_def=None, dtype=None, expected_shape=None, import_scope=None)```  
->```tf.Variable(value, name=None, dtype=None)```  
->```tf.Variable.initialized_value()```  
->```tf.Variable.assign(value, use_locking=False)```  
+>tf.Variable.__init__(initial_value=None, trainable=True, collections=None, validate_shape=True, caching_device=None, name=None, variable_def=None, dtype=None, expected_shape=None, import_scope=None)  
+>tf.Variable(value, name=None, dtype=None)  
+>tf.Variable.initialized_value()  
+>tf.Variable.assign(value, use_locking=False)  
 
 
 
