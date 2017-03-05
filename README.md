@@ -87,6 +87,57 @@ Installing the NVIDIA display driver...
 
 ```
 
+### Set PATH
+```sh
+vi ~/.bashrc
+```
+```sh
+### CUDA PATH
+export CUDA_HOME=/usr/local/cuda-8.0
+export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
+```
+
+### Check `cuda` working
+
+```sh
+nvcc --version
+```
+```sh
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2016 NVIDIA Corporation
+Built on Tue_Jan_10_13:22:03_CST_2017
+Cuda compilation tools, release 8.0, V8.0.61
+
+```
+### Test`cuda`
+
+```sh
+cuda-install-samples-8.0.sh <target-path>(~/)
+```
+
+or
+
+```sh
+cd ~/NVIDIA_CUDA-8.0_Samples/1_Utilities/bandwidthTest/
+make 
+./bandwidthTest
+```
+```sh
+"/usr/local/cuda-8.0"/bin/nvcc -ccbin g++ -I../../common/inc  -m64    -gencode arch=compute_20,code=sm_20 -gencode arch=compute_30,code=sm_30 -gencode arch=compute_35,code=sm_35 -gencode arch=compute_37,code=sm_37 -gencode arch=compute_50,code=sm_50 -gencode arch=compute_52,code=sm_52 -gencode arch=compute_60,code=sm_60 -gencode arch=compute_60,code=compute_60 -o bandwidthTest.o -c bandwidthTest.cu
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+"/usr/local/cuda-8.0"/bin/nvcc -ccbin g++   -m64      -gencode arch=compute_20,code=sm_20 -gencode arch=compute_30,code=sm_30 -gencode arch=compute_35,code=sm_35 -gencode arch=compute_37,code=sm_37 -gencode arch=compute_50,code=sm_50 -gencode arch=compute_52,code=sm_52 -gencode arch=compute_60,code=sm_60 -gencode arch=compute_60,code=compute_60 -o bandwidthTest bandwidthTest.o 
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+mkdir -p ../../bin/x86_64/linux/release
+cp bandwidthTest ../../bin/x86_64/linux/release
+
+```
+
+### Install `cuDNN`
+
+Download [here](https://developer.nvidia.com/cudnn)
+
 
 ## Install `tensorflow`
 ```sh
