@@ -25,8 +25,12 @@ Download it [here](https://developer.nvidia.com/cuda-downloads)
 
 ### Exit `X server` if it is running
 
+1. `logout` or `reboot`
+2. enter `tty`
+3. `stop service`
 ```sh
 sudo service lightdm stop
+sudo init 3 (or sudo init 5)
 ```
 
 ### Run `cuda runfile`
@@ -80,8 +84,6 @@ Enter CUDA Samples Location
  [ default is /home/pydemia ]: 
 
 Installing the NVIDIA display driver...
-It appears that an X server is running. Please exit X before installation. If you're sure that X is not running, but are getting this error, please delete any X lock files in /tmp.
-
 
 ```
 
