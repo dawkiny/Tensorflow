@@ -113,8 +113,10 @@ Cuda compilation tools, release 8.0, V8.0.61
 ```
 ### Test`cuda`
 
+
+#### Install samples if you didn't install the CUDA 8.0 Samples
 ```sh
-cuda-install-samples-8.0.sh <target-path>(~/)
+cuda-install-samples-8.0.sh ~/
 ```
 
 or
@@ -122,7 +124,6 @@ or
 ```sh
 cd ~/NVIDIA_CUDA-8.0_Samples/1_Utilities/bandwidthTest/
 make 
-./bandwidthTest
 ```
 ```sh
 "/usr/local/cuda-8.0"/bin/nvcc -ccbin g++ -I../../common/inc  -m64    -gencode arch=compute_20,code=sm_20 -gencode arch=compute_30,code=sm_30 -gencode arch=compute_35,code=sm_35 -gencode arch=compute_37,code=sm_37 -gencode arch=compute_50,code=sm_50 -gencode arch=compute_52,code=sm_52 -gencode arch=compute_60,code=sm_60 -gencode arch=compute_60,code=compute_60 -o bandwidthTest.o -c bandwidthTest.cu
@@ -134,14 +135,89 @@ cp bandwidthTest ../../bin/x86_64/linux/release
 
 ```
 
-### Install `cuDNN`
+#### Run Samples
+
+```sh
+./bandwidthTest
+```
+```
+[CUDA Bandwidth Test] - Starting...
+Running on...
+
+ Device 0: GeForce GTX 1070
+ Quick Mode
+
+ Host to Device Bandwidth, 1 Device(s)
+ PINNED Memory Transfers
+   Transfer Size (Bytes)	Bandwidth(MB/s)
+   33554432			6343.6
+
+ Device to Host Bandwidth, 1 Device(s)
+ PINNED Memory Transfers
+   Transfer Size (Bytes)	Bandwidth(MB/s)
+   33554432			6441.1
+
+ Device to Device Bandwidth, 1 Device(s)
+ PINNED Memory Transfers
+   Transfer Size (Bytes)	Bandwidth(MB/s)
+   33554432			190413.9
+
+Result = PASS
+
+NOTE: The CUDA Samples are not meant for performance measurements. Results may vary when GPU Boost is enabled.
+
+```
+
+In case of error or problems with the legacy nvidia driver(not `cuda`, reinstall it.
+
+
+## Install `cuDNN`
 
 Download [here](https://developer.nvidia.com/cudnn)
 
+```sh
+tar -zxvf cudnn-8.0-linux-x64-v5.1.tgz
+cd cuda
+sudo cp include/cudnn.h /usr/local/cuda-8.0/include/
+sudo cp lib64/* /usr/local/cuda-8.0/lib64/
+
+```
 
 ## Install `tensorflow`
 ```sh
 conda create -n tensorflow python=3.5
+source activate tensorflow
+pip install --ignore-installed --upgrade \
+ https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.0.0-cp35-cp35m-linux_x86_64.whl
+ 
 ```
+CPU ONLY:
+```sh
+https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.0.0-cp35-cp35m-linux_x86_64.whl
+```
+GPU Support:
+```sh
+https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.0.0-cp35-cp35m-linux_x86_64.whl
+
+```
+In case of uninstallation:
+```sh
+conda env remove -n tensorflow
+```
+
+### Test `tensorflow`
+
+with `source activate tensorflow`:
+```sh
+python
+```
+```py
+import tensorflow as tf
+hello = tf.constant('Hello, TensorFlow!')
+sess = tf.Session()
+print(sess.run(hello))
+
+```
+
 ## Usage
 * [Basics on Tensorflow](https://github.com/dawkiny/Tensorflow/blob/master/scripts/basic.md)
