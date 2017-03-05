@@ -31,7 +31,7 @@ sudo service lightdm stop
 
 ### Run `cuda runfile`
 ```sh
-sudo sh cuda_8.0.61_375.26_linux.run
+sudo bash cuda_8.0.61_375.26_linux.run
 ```
 ```sh
 ...
