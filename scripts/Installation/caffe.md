@@ -43,7 +43,7 @@ conda update conda
 ```
 
 ## Optional(install with separated environment) : 
-``sh
+```sh
 conda create -n testcaffe python
 source activate testcaffe
 ```
