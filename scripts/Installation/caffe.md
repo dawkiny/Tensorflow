@@ -33,7 +33,7 @@ cd build
 cmake ..
 make --jobs=4
 
-``
+```
 
 ## Install `Caffe` from Source ( with Anaconda Python )
 
