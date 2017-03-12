@@ -180,6 +180,7 @@ tar -zxvf cudnn-8.0-linux-x64-v5.1.tgz
 cd cuda
 sudo cp include/cudnn.h /usr/local/cuda-8.0/include/
 sudo cp lib64/* /usr/local/cuda-8.0/lib64/
+sudo chmod a+r /usr/local/cuda-8.0/*
 
 ```
 
