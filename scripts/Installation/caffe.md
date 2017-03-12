@@ -35,6 +35,8 @@ make --jobs=4
 
 ```
 
+
+
 ## Install `Caffe` from Source ( with Anaconda Python )
 
 ```sh
@@ -42,7 +44,7 @@ conda update conda
 
 ```
 
-## Optional(install with separated environment) : 
+### Optional(install with separated environment) : 
 ```sh
 conda create -n testcaffe python
 source activate testcaffe
