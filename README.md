@@ -3,6 +3,6 @@
 ## Installation
 
 * [`cuda`]()
-* ['caffe']()
-* ['digits']()
-* ['tensorflow']()
+* [`caffe`]()
+* [`digits`]()
+* ['tensorflow`]()
