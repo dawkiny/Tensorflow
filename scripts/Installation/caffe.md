@@ -50,6 +50,12 @@ conda create -n caffe python=3.5
 source activate caffe
 ```
 
+### Optional(Use python3.5) :
+
+```sh
+env PYTHON_CONFIGURE_OPTS="--enable-shared" pyenv install 3.5.1
+```
+
 ### Install `OpenCV`
 
 ```sh
@@ -72,9 +78,21 @@ sudo apt-get install -y libgflags-dev libgoogle-glog-dev liblmdb-dev
 ### Build `Caffe`
 
 Download `zip` [here](https://github.com/BVLC/caffe)
-
+```sh
+mv Downloads/caffe-master.zip ~/apps
+cd apps
+unzip caffe-master.zip
+mv caffe-master caffe
+vi ~/.bashrc
+```
 
 ```sh
+# CAFFE PATH
+export CAFFE_HOME="/home/pydemia/apps/caffe"
+```
+
+```sh
+
 cd $CAFFE_HOME
 mkdir build
 cd build
@@ -83,6 +101,19 @@ make all
 make install
 make runtest
 ```
+
+
+```sh
+
+cd $CAFFE_HOME
+mkdir build
+cd build
+cmake .. -DPYTHON_INCLUDE_DIR=~/.pyenv/versions/3.5.1/include/python3.5m -DPYTHON_INCLUDE_DIR2=~/.pyenv/versions/3.5.1/include/python3.5m -DPYTHON_LIBRARY=~/.pyenv/versions/3.5.1/lib/libpython3.so -Dpython_version=3 ../caffe
+make all
+make install
+make runtest
+```
+
 
 In case of error:
 
@@ -103,7 +134,7 @@ export PYTHONPATH=`pwd`${PYTHONPATH:+:${PYTHONPATH}}
 ### Test & Run
 
 ```sh
-python -c "import caffe;print caffe.__version__"
+python -c "import caffe;print(caffe.__version__)"
 
 ```
 
