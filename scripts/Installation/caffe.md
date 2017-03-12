@@ -46,8 +46,8 @@ conda update conda
 
 ### Optional(install with separated environment) : 
 ```sh
-conda create -n testcaffe python
-source activate testcaffe
+conda create -n caffe python
+source activate caffe
 ```
 
 ### Install `OpenCV`
