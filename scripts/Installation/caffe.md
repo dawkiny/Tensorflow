@@ -46,7 +46,7 @@ conda update conda
 
 ### Optional(install with separated environment) : 
 ```sh
-conda create -n caffe python
+conda create -n caffe python=3.5
 source activate caffe
 ```
 
