@@ -37,7 +37,7 @@ make --jobs=4
 
 
 
-## Install `Caffe` from Source ( with Anaconda Python )
+## Install `Caffe` from Source ( with Anaconda Python=3.5 )
 
 ```sh
 conda update conda
