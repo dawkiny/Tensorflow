@@ -87,6 +87,47 @@ vi ~/.bashrc
 ```
 
 ```sh
+cd caffe
+cp Makefile.config.example Makefile.config
+vi Makefile.config
+```
+
+```sh
+# cuDNN acceleration switch (uncomment to build with cuDNN).
+USE_CUDNN := 1
+
+# Uncomment if you're using OpenCV 3
+# OPENCV_VERSION := 3
+
+# PYTHON_INCLUDE := /usr/include/python2.7 \
+# 		/usr/lib/python2.7/dist-packages/numpy/core/include
+
+# Anaconda Python distribution is quite popular. Include path:
+# Verify anaconda location, sometimes it's in root.
+ANACONDA_HOME := $(HOME)/apps/anaconda3
+PYTHON_INCLUDE := $(ANACONDA_HOME)/include \
+		$(ANACONDA_HOME)/include/python3.5 \
+		$(ANACONDA_HOME)/lib/python3.5/site-packages/numpy/core/incl
+    
+# Uncomment to use Python 3 (default is Python 2)
+PYTHON_LIBRARIES := boost_python3 python3.5m
+# PYTHON_INCLUDE := /usr/include/python3.5m \
+#                 /usr/lib/python3.5/dist-packages/numpy/core/include
+
+# We need to be able to find libpythonX.X.so or .dylib.
+# PYTHON_LIB := /usr/lib
+PYTHON_LIB := $(ANACONDA_HOME)/lib
+
+# Uncomment to support layers written in Python (will link against Python libs)
+WITH_PYTHON_LAYER := 1
+
+# Uncomment to use `pkg-config` to specify OpenCV library paths.
+# (Usually not necessary -- OpenCV libraries are normally installed in one of the above $LIBRARY_DIRS.)
+# USE_PKG_CONFIG := 1
+
+```
+
+```sh
 # CAFFE PATH
 export CAFFE_HOME="/home/pydemia/apps/caffe"
 ```
