@@ -4,6 +4,7 @@
 ## Install `Caffe` from Source ( with pure Python )
 
 ```sh
+sudo apt-get install libopenblas-dev
 sudo apt-get install --no-install-recommends build-essential cmake git gfortran libatlas-base-dev libboost-all-dev libgflags-dev libgoogle-glog-dev libhdf5-serial-dev libleveldb-dev liblmdb-dev libopencv-dev libprotobuf-dev libsnappy-dev protobuf-compiler python-all-dev python-dev python-h5py python-matplotlib python-numpy python-opencv python-pil python-pip python-protobuf python-scipy python-skimage python-sklearn
 ```
 
@@ -41,7 +42,33 @@ make --jobs=4
 
 ```sh
 conda update conda
+conda install -c statiskit libboost=1.61.0
+conda install -c meznom boost-python=1.55.0
+conda install leveldb
+conda install protobuf
+conda install python-gflags
 
+conda install -c https://conda.anaconda.org/anaconda protobuf
+```
+
+```sh
+Cython>=0.19.2
+numpy>=1.7.1
+scipy>=0.13.2
+scikit-image>=0.9.3
+matplotlib>=1.3.1
+ipython>=3.0.0
+h5py>=2.2.0
+leveldb>=0.191
+networkx>=1.8.1
+nose>=1.3.0
+pandas>=0.12.0
+python-dateutil>=1.4,<2
+protobuf>=2.5.0
+python-gflags>=2.0
+pyyaml>=3.10
+Pillow>=2.3.0
+six>=1.1.0
 ```
 
 ### Optional(install with separated environment) : 
@@ -68,6 +95,7 @@ conda install -c menpo opencv3
 ```sh
 sudo apt-get update
 sudo apt-get upgrade
+sudo apt-get install libopenblas-dev
 sudo apt-get install -y build-essential cmake git pkg-config
 sudo apt-get install -y libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler libatlas-base-dev libgflags-dev libgoogle-glog-dev liblmdb-dev
 sudo apt-get install libboost-all-dev
@@ -140,6 +168,11 @@ LIBRARY_DIRS += $(shell brew --prefix)/lib
 ```sh
 # CAFFE PATH
 export CAFFE_HOME="/home/pydemia/apps/caffe"
+```
+
+```sh
+cd ~/caffe/python
+sudo apt-get install python-pip && sudo pip install -r requirements.txt
 ```
 
 ```sh
