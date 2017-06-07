@@ -80,7 +80,7 @@ Install the CUDA 8.0 Samples?
 (y)es/(n)o/(q)uit: y
 
 Enter CUDA Samples Location
- [ default is /home/pydemia ]:  /home/pydemia/apps/cuda/samples
+ [ default is /home/pydemia ]:
 
 
 Installing the NVIDIA display driver...
