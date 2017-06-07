@@ -65,7 +65,7 @@ This will update the system X configuration file so that the NVIDIA X driver
 is used. The pre-existing X configuration file will be backed up.
 This option should not be used on systems that require a custom
 X configuration, such as systems with multiple GPU vendors.
-(y)es/(n)o/(q)uit [ default is no ]: y
+(y)es/(n)o/(q)uit [ default is no ]: n
 
 Install the CUDA 8.0 Toolkit?
 (y)es/(n)o/(q)uit: y
