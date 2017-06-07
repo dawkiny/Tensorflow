@@ -183,3 +183,5 @@ sudo cp lib64/* /usr/local/cuda-8.0/lib64/
 sudo chmod a+r /usr/local/cuda-8.0/*
 
 ```
+
+Done.
