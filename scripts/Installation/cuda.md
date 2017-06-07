@@ -176,7 +176,7 @@ In case of error or problems with the legacy nvidia driver(not `cuda`, reinstall
 Download [here](https://developer.nvidia.com/cudnn)
 
 ```sh
-tar -zxvf cudnn-8.0-linux-x64-v5.1.tgz
+tar -zxvf cudnn-8.0-linux-x64-v6.0.tgz
 cd cuda
 sudo cp include/cudnn.h /usr/local/cuda-8.0/include/
 sudo cp lib64/* /usr/local/cuda-8.0/lib64/
