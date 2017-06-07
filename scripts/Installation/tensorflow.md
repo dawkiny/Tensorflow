@@ -41,5 +41,24 @@ print(sess.run(hello))
 
 ```
 
+In case of `ImportError` as the following:
+```sh
+ImportError: libcudart.so.8.0: cannot open shared object file: No such file or directory
+```
+
+```sh
+sudo vi /etc/ld.so.conf.d/nvidia.conf
+```
+
+```vim
+/usr/local/cuda-8.0/lib64
+/usr/local/cuda-8.0/lib    # This line can be un-necessary : Check if it exists
+```
+
+Then
+```sh
+sudo ldconfig
+```
+
 ## Usage
 * [Basics on Tensorflow](https://github.com/dawkiny/Tensorflow/blob/master/scripts/basic.md)
