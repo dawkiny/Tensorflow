@@ -3,6 +3,8 @@
 
 ## Install `tensorflow`
 ```sh
+sudo apt-get install libcupti-dev
+
 conda create -n tensorflow python=3.5
 source activate tensorflow
 pip install --ignore-installed --upgrade \
