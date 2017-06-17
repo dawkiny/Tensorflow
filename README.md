@@ -13,7 +13,12 @@
 ## Basics on `tensorflow`
 
 * [About `tensor`](https://github.com/pydemia/Tensorflow/blob/master/scripts/basic/basics.md#basics-on-tensorflow)
-* [CNN]()
-* [DNN]()
-* [RNN]()
-* [GAN]()
+
+## Machine Learning
+
+
+## Deep Learning
+* [CNN(Convolution Neural Networks)]()
+* [RNN(Recurrent Neural Networks)]()
+* [DNN(Deep Neural Networks)]()
+* [GAN(Generative Adversarial Networks)]()
