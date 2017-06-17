@@ -17,8 +17,9 @@
 ## Machine Learning
 
 
+
 ## Deep Learning
-* [CNN(Convolution Neural Networks)]()
-* [RNN(Recurrent Neural Networks)]()
-* [DNN(Deep Neural Networks)]()
-* [GAN(Generative Adversarial Networks)]()
+* [CNN (Convolution Neural Networks)]()
+* [RNN (Recurrent Neural Networks)]()
+* [DNN (Deep Neural Networks)]()
+* [GAN (Generative Adversarial Networks)]()
