@@ -1,2 +1,0 @@
-# CNN (Convolutional Neural Networks)
-
