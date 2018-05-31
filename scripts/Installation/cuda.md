@@ -178,9 +178,9 @@ Download [here](https://developer.nvidia.com/cudnn)
 ```sh
 tar -zxvf cudnn-8.0-linux-x64-v6.0.tgz
 cd cuda
-sudo cp include/cudnn.h /usr/local/cuda-8.0/include/
-sudo cp lib64/* /usr/local/cuda-8.0/lib64/
-sudo chmod a+r /usr/local/cuda-8.0/*
+#sudo cp include/cudnn.h /usr/local/cuda-8.0/include/
+#sudo cp lib64/* /usr/local/cuda-8.0/lib64/
+#sudo chmod a+r /usr/local/cuda-8.0/*
 
 sudo cp -P include/cudnn.h /usr/local/cuda/include
 sudo cp -P lib64/libcudnn* /usr/local/cuda/lib64
