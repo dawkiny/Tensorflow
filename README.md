@@ -9,6 +9,10 @@
 * [`digits`]()
 
 
+## Updates
+
+* [`cuda` 8 to 9](scripts/Updates/cuda.md)
+
 
 ## Basics on `tensorflow`
 
