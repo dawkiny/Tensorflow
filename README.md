@@ -27,3 +27,10 @@
 * [RNN (Recurrent Neural Networks)]()
 * [DNN (Deep Neural Networks)]()
 * [GAN (Generative Adversarial Networks)]()
+
+
+## Tips on Training
+
+* `is_training` Option Tensor
+* multiple `gpu`
+
