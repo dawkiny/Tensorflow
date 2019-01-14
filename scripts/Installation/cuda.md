@@ -192,4 +192,17 @@ sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
 
 ```
 
+## Uninstall
+
+```sh
+sudo nvidia-uninstall
+sudo apt-get remove --purge '^nvidia-.*'
+sudo apt autoremove
+sudo apt autoclean
+
+
+cd /usr/local/cuda-9.0/bin
+sudo ./uninstall_cuda_9.0.pl
+```
+
 Done.
